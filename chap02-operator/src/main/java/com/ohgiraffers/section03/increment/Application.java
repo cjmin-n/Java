@@ -18,14 +18,14 @@ public class Application {
 
         result = 1;
         result = result * num++;
-        System.out.println(result);
-        System.out.println(num);
+        System.out.println(result); // 11
+        System.out.println(num); // 12
 
         System.out.println("--비교--");
 
         result = 1;
         result = result * ++num;
-        System.out.println(result);
-        System.out.println(num);
+        System.out.println(result); // 13
+        System.out.println(num); // 13
     }
 }
