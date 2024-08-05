@@ -10,7 +10,7 @@ public class Test {
         int aver = (student1+student2+student3)/3;
         String pass = ((student1 >= 90) && (student1 <= 100)) ? "합격이다." : "불합격이다.";
 
-        System.out.println("1번 : 평균 " + aver);
+        System.out.println("1번 : 평균 " + aver); // 88 (내림)
         System.out.println("1번 : 학생 1은 " + pass);
 
         pass = ((student2 >= 90) && (student2 <= 100)) ? "합격이다." : "불합격이다.";
