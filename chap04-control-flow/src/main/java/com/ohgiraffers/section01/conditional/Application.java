@@ -15,7 +15,7 @@ public class Application {
 
         C_ifElseIf c = new C_ifElseIf();
         // c.testSimpleIfElseIfStatement();
-        c.testNestedIfElseIfStatement();
+        // c.testNestedIfElseIfStatement();
 
         /*String name2 ="홍길동";
         int point2 = 60;
@@ -27,6 +27,10 @@ public class Application {
         System.out.println("점수를 입력해주세요");
         int point = scr.nextInt();
         c.gradeCalculator(name, point);*/
+
+        D_switch d = new D_switch();
+        // d.testSimpleSwitchStatement();
+        d.testSwitchVendingMachine();
 
     }
 }
