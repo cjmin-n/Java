@@ -161,13 +161,13 @@ public class A_for {
          * */
         Scanner scr = new Scanner(System.in);
         System.out.println("첫번째 숫자를 입력해 주세요.");
-        // int a = scr.nextInt();
-        int min = scr.nextInt();
-        System.out.println("두번째 숫자를 입력해 주세요.");
-        //int b = scr.nextInt();
-        int max = scr.nextInt();
+        int a = scr.nextInt();
 
-       /* int min = 0;
+        System.out.println("두번째 숫자를 입력해 주세요.");
+        int b = scr.nextInt();
+
+
+        int min = 0;
         int max = 0;
 
         if (a < b) {
@@ -176,7 +176,7 @@ public class A_for {
         }else if (a > b) {
             max = a;
             min = b;
-        }*/
+        }
 
         System.out.println(min + " 부터 " + max + "까지의 소수");
 
