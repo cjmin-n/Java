@@ -7,10 +7,11 @@ public class Application {
 
         A_for a = new A_for();
         // a.testSimpleForStatement();
-        a.testForExample();
+        // a.testForExample();
         // a.printGugudan();
         // a.testForExample2();
-        a.test();
+        // a.test();
+        // a.wrong();
 
 
 
