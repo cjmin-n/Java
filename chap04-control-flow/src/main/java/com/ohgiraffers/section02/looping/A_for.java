@@ -189,6 +189,11 @@ public class A_for {
                     isTrue = false;
                     break;
                 }
+                /*
+                잘못썼던 구문
+                if (i % j != 0){
+                    System.out.println(i);
+                }*/
             }
             if (isTrue == true) {
                 if(i == 0 || i == 1){
@@ -196,10 +201,9 @@ public class A_for {
                 } else {
                     System.out.println(i);
                 }
-
             }
-        }
 
+        }
 
 
     }
