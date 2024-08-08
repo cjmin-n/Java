@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/chap03-method-and-api/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chap04-control-flow/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chap05-array-lecture-source/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
