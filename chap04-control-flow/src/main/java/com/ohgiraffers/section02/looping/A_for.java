@@ -189,7 +189,6 @@ public class A_for {
                     isTrue = false;
                     break;
                 }
-
             }
             if (isTrue == true) {
                 if(i == 0 || i == 1){
