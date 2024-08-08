@@ -23,7 +23,8 @@ public class Question {
         int[] num1 = new int[9];
         for (int i = 0; i < num1.length; i++) {
             num1[i] = i + 2;
-        } // -> int[] num1 = {2, 3, 4, 5, 6, 7, 8, 9, 10}
+        }
+        // -> int[] num1 = {2, 3, 4, 5, 6, 7, 8, 9, 10}
 
         String[] num2 = {"A", "J", "Q", "K"};
 
