@@ -13,8 +13,10 @@ public class Question {
         String[] shape = {"다이아", "하트", "스페이드", "클로버"};
         String[] num = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 
-        int random = (int)(Math.random()*3)+1;
-        int random2 = (int)(Math.random()*12)+1;
+        //int random = (int)(Math.random()*3)+1;
+        //int random2 = (int)(Math.random()*12)+1;
+        int random = (int)(Math.random()*shape.length);
+        int random2 = (int)(Math.random()*num.length);
         System.out.println("트럼프 카드 랜덤 한장 출력 : " + shape[random] + " " + num[random2]);
 
         System.out.println("================================");
