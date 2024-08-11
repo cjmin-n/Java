@@ -87,8 +87,8 @@ public class Question {
             System.out.println("배열의 요소를 입력 해 주세요 : ");
             arrNum = scr.nextInt();
             arr[i] = arrNum;
-            // 2 3 5
-            max = Math.max(max, arrNum); // 5
+
+            max = Math.max(max, arrNum);
 
             if (max > arrNum){
                 maxSecond = Math.max(maxSecond, arrNum);
@@ -101,6 +101,43 @@ public class Question {
         System.out.println("만들어진 값 중에 최고 값 : " + max);
         System.out.println("만들어진 값 중에 두번째 최고 값 : " + maxSecond);
 
+        int temp;
+
+        for (int i = 0; i < arrLength-1; i++){
+            for (int j = 0; j < arrLength-1 - i; j++) {
+                if (arr[j] > arr[j+1]){
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+
+        int[] temporary = new int[arrLength];
+        int j = 0;
+        for (int i = 0; i < arrLength-1; i++) {
+            if(arr[i] != arr[i+1]){
+                temporary[j++] = arr[i];
+            }
+        }
+
+        System.out.println(Arrays.toString(temporary));
+
+        temporary[j++] = arr[arrLength-1];
+        System.out.println(Arrays.toString(temporary));
+
+        int count = 0;
+        for (int i = 0; i < temporary.length; i++) {
+            if(temporary[i] != 0){
+                count++;
+            }
+        }
+
+        int[] result = new int[count];
+        result = Arrays.copyOf(temporary, count);
+
+        System.out.println(Arrays.toString(result));
 
     }
 }
