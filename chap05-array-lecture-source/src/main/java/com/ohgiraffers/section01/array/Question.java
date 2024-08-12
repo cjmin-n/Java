@@ -134,13 +134,11 @@ public class Question {
             }
         }
 
+        // 깊은 복사로 중복제외한 배열 만듦
         int[] result = new int[count];
         result = Arrays.copyOf(temporary, count);
 
         System.out.println(Arrays.toString(result));
-
-
-
 
     }
 }

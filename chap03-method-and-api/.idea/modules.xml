@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/chap3-method-and-api.iml" filepath="$PROJECT_DIR$/chap3-method-and-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap03-method-and-api.iml" filepath="$PROJECT_DIR$/chap03-method-and-api.iml" />
     </modules>
   </component>
 </project>
