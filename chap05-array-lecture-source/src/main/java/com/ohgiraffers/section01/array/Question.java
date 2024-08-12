@@ -102,5 +102,8 @@ public class Question {
         System.out.println("만들어진 값 중에 두번째 최고 값 : " + maxSecond);
 
 
+
+
+
     }
 }
