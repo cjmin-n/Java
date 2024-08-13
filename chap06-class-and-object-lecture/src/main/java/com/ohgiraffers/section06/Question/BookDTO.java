@@ -66,7 +66,6 @@ public class BookDTO {
 
     public void printInformation(){
         System.out.println(getTitle() + " " + getPublisher() + " " +  getAuthor() + " " + getPrice() + " " + getDiscountRate());
-        
     }
 
 
