@@ -24,6 +24,7 @@ public class Application {
                 default :
                     System.out.println("잘못입력하셨습니다."); break;
             }
+
         }
 
 
