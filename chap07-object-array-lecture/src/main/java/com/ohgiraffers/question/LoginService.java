@@ -56,7 +56,7 @@ public class LoginService {
 
 
     }
-    public void login(){
+    public boolean login(){
 
         Scanner scr = new Scanner(System.in);
 
@@ -74,11 +74,15 @@ public class LoginService {
         User user = new User(id, pwd);
 
         LoginRepository loginRepository = new LoginRepository();
+
         if(loginRepository.login(user)){
             System.out.println("로그인에 성공하셨습니다.");
             System.out.println("프로그램을 종료합니다.");
 
-            System.exit(0);
+            //System.exit(0);
+            return true;
+        }else {
+            return false;
         }
 
     }

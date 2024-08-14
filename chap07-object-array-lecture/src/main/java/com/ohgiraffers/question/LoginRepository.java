@@ -3,7 +3,6 @@ package main.java.com.ohgiraffers.question;
 public class LoginRepository {
 
     private static final User[] user = new User[10];
-    //private static final User[] user = new User[2];
     private static int count;
 
 
@@ -30,7 +29,6 @@ public class LoginRepository {
 
         for (int i = 0; i < user.length; i++) {
 
-//            if(user[i].getId() == newUser.getId() && user[i].getPwd() == newUser.getPwd()){
             String id = user[i].getId();
             String pwd = user[i].getPwd();
 

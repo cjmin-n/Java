@@ -18,7 +18,10 @@ public class Application {
 
             switch(no){
                 case 1 : loginService.signUp(); break;
-                case 2 : loginService.login(); break;
+                case 2 :
+                    if(loginService.login()){
+                        break loop;
+                    }; break;
                 case 9 :
                     System.out.println("프로그램 종료"); break loop;
                 default :
