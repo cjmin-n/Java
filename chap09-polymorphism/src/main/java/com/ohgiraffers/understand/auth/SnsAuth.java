@@ -1,6 +1,6 @@
-package main.java.com.ohgiraffers.understand1.auth;
+package main.java.com.ohgiraffers.understand.auth;
 
-import main.java.com.ohgiraffers.understand1.dto.MemberDTO;
+import main.java.com.ohgiraffers.understand.dto.MemberDTO;
 
 public interface SnsAuth {
 

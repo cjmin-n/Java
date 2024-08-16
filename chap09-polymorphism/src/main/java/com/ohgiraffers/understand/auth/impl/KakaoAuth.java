@@ -1,8 +1,8 @@
-package main.java.com.ohgiraffers.understand1.auth.impl;
+package main.java.com.ohgiraffers.understand.auth.impl;
 
-import main.java.com.ohgiraffers.understand1.auth.SnsAuth;
-import main.java.com.ohgiraffers.understand1.dto.MemberDTO;
-import main.java.com.ohgiraffers.understand1.service.MemberService;
+import main.java.com.ohgiraffers.understand.auth.SnsAuth;
+import main.java.com.ohgiraffers.understand.dto.MemberDTO;
+import main.java.com.ohgiraffers.understand.service.MemberService;
 
 public class KakaoAuth implements SnsAuth {
 
@@ -12,9 +12,9 @@ public class KakaoAuth implements SnsAuth {
         for(MemberDTO defaultMember : MemberService.memberDTOS){
 
             if(member.getId().equals(defaultMember.getId())){
-                // System.out.println(member.getId() + " / " + defaultMember.getId());
+
                 if(member.getPwd().equals(defaultMember.getPwd())){
-                    // System.out.println(member.getPwd() + " / " + defaultMember.getPwd());
+
                     return true;
                 }
             }

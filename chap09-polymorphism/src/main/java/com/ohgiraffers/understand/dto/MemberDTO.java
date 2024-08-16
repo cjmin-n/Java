@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.understand1.dto;
+package main.java.com.ohgiraffers.understand.dto;
 
 public class MemberDTO {
 
