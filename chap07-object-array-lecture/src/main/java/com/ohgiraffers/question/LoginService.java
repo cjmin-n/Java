@@ -46,8 +46,7 @@ public class LoginService {
 
         User user = new User(id, name, pwd);
 
-        LoginRepository loginRepository = new LoginRepository();
-        if(loginRepository.signUp(user)){
+        if(LoginRepository.signUp(user)){
             System.out.println("회원가입에 성공했습니다.");
             // count++;
         }else {
@@ -73,9 +72,8 @@ public class LoginService {
 
         User user = new User(id, pwd);
 
-        LoginRepository loginRepository = new LoginRepository();
 
-        if(loginRepository.login(user)){
+        if(LoginRepository.login(user)){
             System.out.println("로그인에 성공하셨습니다.");
             System.out.println("프로그램을 종료합니다.");
 

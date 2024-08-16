@@ -6,7 +6,7 @@ public class LoginRepository {
     private static int count;
 
 
-    public boolean signUp(User newUser){
+    public static boolean signUp(User newUser){
 
         if(count >= user.length){
             System.out.println("가입인원을 초과했습니다.");
@@ -20,7 +20,7 @@ public class LoginRepository {
     }
 
 
-    public boolean login(User newUser){
+    public static boolean login(User newUser){
 
         if(count == 0){
             System.out.println("가입한 회원이 없습니다.");
