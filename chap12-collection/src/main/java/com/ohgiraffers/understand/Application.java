@@ -11,6 +11,9 @@ public class Application {
         int saleCount = 0;
         int number = 0;
 
+        HashMap map = new HashMap();
+
+
         while(true){
             Scanner scr = new Scanner(System.in);
 
@@ -24,9 +27,6 @@ public class Application {
                 continue;
             }
 
-
-            HashMap map = new HashMap();
-
             for (int i = 0; i < num; i++) {
 
                 Set<Integer> lotto = new TreeSet<>();
@@ -38,13 +38,13 @@ public class Application {
                  number++;
 
                 // 저장 을 해야함 !..
-                map.put( number + "번 로또", lotto);
+                if(number < 11){
+                    map.put( number + "번 로또", lotto);
+                }
             }
 
 
-            System.out.println("map : " + map);
-
-
+            // System.out.println("map : " + map);
 
 
             Set<Integer> win = new TreeSet<>();
@@ -58,20 +58,18 @@ public class Application {
 
                 // 당첨번호랑 비교................
                 Collection values = map.values();
-                System.out.println("map.value" + values);
+                // System.out.println("map.value" + values);
                 // Object[] arr = values.toArray();
 
                 for(Object obj : values) {
                     if (obj.equals(win)) {
                         System.out.println("당첨 번호 : " + win);
                         System.out.println(number + "번 로또 당첨 " + map.get(number + "번 로또"));
-                    } else {
-                        System.out.println("행운 번호 : " + win);
-                        System.out.println("이번 회차 당첨 없음");
                     }
                 }
-            }else {
-                continue;
+
+                System.out.println("행운 번호 : " + win);
+                System.out.println("이번 회차 당첨 없음");
             }
 
 
