@@ -27,9 +27,7 @@ public class Application {
 
             HashMap map = new HashMap();
 
-
             for (int i = 0; i < num; i++) {
-
 
                 Set<Integer> lotto = new TreeSet<>();
                 // 번호 똑같음 -> for 내부에서 초기화해줘서 해결 !
@@ -40,12 +38,14 @@ public class Application {
                  number++;
 
                 // 저장 을 해야함 !..
-                // map.put( (i+1) + "번 로또 ", lotto);
                 map.put( number + "번 로또", lotto);
             }
 
 
             System.out.println("map : " + map);
+
+
+
 
             Set<Integer> win = new TreeSet<>();
 
