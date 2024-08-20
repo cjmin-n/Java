@@ -4,42 +4,17 @@ package main.java.com.ohgiraffers.understand.chap01;
 public class BankAccount {
     private int accountNumber;
     private String name;
-    private int accountBalance;
+    private double accountBalance;
 
-    public BankAccount() {
-    }
-
-    public BankAccount(int accountNumber, String name, int accountBalance) {
+    public BankAccount(int accountNumber, String name, double accountBalance) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.accountBalance = accountBalance;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
-    }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAccountBalance() {
-        return accountBalance;
-    }
-
-    public void setAccountBalance(int accountBalance) {
-        this.accountBalance = accountBalance;
-    }
-
-    public void deposit (int money){
+    public void deposit (double money){
         if(money < 0){
             try{
                 throw new Exception("입금은 양수만 가능합니다.");
@@ -47,13 +22,15 @@ public class BankAccount {
                 System.out.println("입금은 양수만 가능 : " + e.getMessage());
             }
         }else {
-            this.accountBalance += money;
-            this.setAccountBalance(this.accountBalance);
+            /*this.accountBalance += money;
+            this.setAccountBalance(this.accountBalance);*/
+            accountBalance += money;
+            System.out.println(money + "원이 입금되었습니다. 현재 잔액은 " + accountBalance);
         }
     }
 
 
-    public void withdraw (int money){
+    public void withdraw (double money){
 
         if(this.accountBalance < money){
             try{
@@ -62,11 +39,18 @@ public class BankAccount {
                 System.out.println("계좌잔고부족 : " + e.getMessage());
             }
         }else {
-            this.accountBalance -= money;
+            /*this.accountBalance -= money;*/
+            accountBalance -= money;
+            System.out.println(money + "원이 출금되었습니다. 현재 잔액은 " + accountBalance);
+
         }
     }
 
-    public void searchAccount (int accountNumber){
+    /*public void searchAccount (int accountNumber){
         System.out.println(this.getAccountBalance());
+    }*/
+
+    public double getAccountBalance() {
+        return accountBalance;
     }
 }

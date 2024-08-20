@@ -5,23 +5,34 @@ import java.util.ArrayList;
 public class Order {
 
     ArrayList<Product> orderList = new ArrayList<>();
+    OrderItem orderItem = new OrderItem();
+    int total;
 
-    int totalAll;
-    OrderItem oi = new OrderItem();
-    Product product = new Product();
+    public void listUp(Product product, int amount){
+        // System.out.println("order : " + product);
+        orderList.add(product);
 
-    public void listUp(Product p){
+        total += orderItem.total(product, amount);
+        // System.out.println("order : " + total);
 
-        orderList.add(p);
-        /*product.setAmount(product.getAmount() - p.getAmount());*/
-        product.
-        System.out.println(orderList); // 쌓임
-        System.out.println(product.products);
     }
 
-    public int totalPrice(Product p){
+    public boolean viewUp(){
 
-        totalAll += oi.total(p);
-        return totalAll;
+        if(orderList.isEmpty()){
+
+            return false;
+        }else {
+            System.out.println("== 주문 내역 == ");
+            for (int i = 0; i < orderList.size(); i++) {
+                System.out.println("제품명 : " + orderList.get(i).getpName() + " | 가격 : " + orderList.get(i).getPrice() + " | 재고 : " + orderList.get(i).getAmount());
+
+            }
+            return true;
+        }
+
+
     }
+
+
 }

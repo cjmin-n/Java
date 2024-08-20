@@ -1,13 +1,17 @@
 package classDiagram.controller;
 
+import classDiagram.model.comparator.AscCategory;
+import classDiagram.model.comparator.DescCategory;
 import classDiagram.model.dto.BookDTO;
 import classDiagram.view.BookMenu;
 
 import java.util.ArrayList;
 
+
+
 public class BookManager {
 
-    private ArrayList<BookDTO> bookList;
+    public ArrayList<BookDTO> bookList;
     BookMenu bm = new BookMenu();
 
 
@@ -19,32 +23,65 @@ public class BookManager {
         this.bookList = books;
     }
 
-    private void addBook(BookDTO book){
-        bm.inputBook(); // 리턴값 new BookDTO(bNo, category, title, author);
-    }
 
-    private void deleteBook(int index){
+    public void addBook(BookDTO book){
 
-    }
-
-    private int searchBook(String bTitle){
-
-        return 0;
-    }
-
-    private void printBook(int index){
+        bookList.add(book);
 
     }
 
-    private void displayAll(){
-        System.out.println();
+    public ArrayList<BookDTO> sortedBookList(int select){
+
+
+        if(select == 1){
+            bookList.sort(new AscCategory());
+        }else if(select == 2){
+            bookList.sort(new DescCategory());
+        }
+
+        for(BookDTO bookDTO : bookList){
+            System.out.println(bookDTO);
+        }
+
+        return this.bookList;
     }
 
-    private ArrayList<BookDTO> sortedBookList(int select){
-        return null;
+    public void printBookList(ArrayList<BookDTO> br){
+        for(BookDTO bookDTO : br){
+            System.out.println(bookDTO);
+        }
     }
 
-    private void printBookList(ArrayList<BookDTO> br){}
+
+
+    public int searchBook(String bTitle){
+        int num = 0;
+        for (int i = 0; i < bookList.size(); i++) {
+            if(bTitle.equals(bookList.get(i).getTitle())){
+                num = i;
+            }else {
+                return -1;
+            }
+        }
+
+        return num;
+    }
+
+    public void deleteBook(int index){
+        bookList.remove(index);
+    }
+
+    public void printBook(int index){
+
+    }
+
+    public void displayAll(){
+        System.out.println(bookList);
+    }
+
+
+
+
 
 
 }
