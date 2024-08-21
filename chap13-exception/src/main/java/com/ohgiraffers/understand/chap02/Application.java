@@ -1,8 +1,6 @@
 package main.java.com.ohgiraffers.understand.chap02;
 
-import main.java.com.ohgiraffers.understand.chap03.Product;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
