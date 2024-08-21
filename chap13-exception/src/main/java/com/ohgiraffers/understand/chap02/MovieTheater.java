@@ -7,7 +7,7 @@ public class MovieTheater {
     /*public Movie[] movies = new Movie[10];*/
     ArrayList<Movie> movies = new ArrayList<>();
     // private int rNum; // 입력 받은 영화 갯수
-    Movie movie = new Movie();
+    Movie movie;
 
     // 영화 추가
     public void addMovie(Movie movie){

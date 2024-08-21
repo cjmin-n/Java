@@ -6,7 +6,7 @@ public class Movie {
     private int time; // 상영 시간
     private int seat; // 총 좌석수
 
-    public Movie(){}
+
 
     public Movie(String title, int time, int seat) {
         this.title = title;
@@ -14,21 +14,7 @@ public class Movie {
         this.seat = seat;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getTime() {
-        return time;
-    }
-
-    public void setTime(int time) {
-        this.time = time;
-    }
 
     public int getSeat() {
         return seat;

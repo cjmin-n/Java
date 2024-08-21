@@ -11,7 +11,7 @@ public class Application {
         String title = "";
         int time = 0;
         int seat = 0;
-        Movie movie;
+
 
 
         Scanner scr = new Scanner(System.in);
@@ -35,7 +35,7 @@ public class Application {
             scr.nextLine();
 
             // 영화 추가 메소드
-            movie = new Movie(title, time, seat);
+            Movie movie = new Movie(title, time, seat);
             // movies.add(new Movie(title, time, seat));
             // System.out.println(movies);
             movieTheater.addMovie(movie);
