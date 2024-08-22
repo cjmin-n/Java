@@ -36,7 +36,7 @@ HashMap -> key: enum / value: ArrayList
 1. 학생 추가
 studentManager.addStudent(studentDTO)
    
-   find(int num) - 있으면 등록안된다. 없으면 등록됨 - enumCheck(int grade) - Map에 저장
+   find(int num) - 있으면 등록안된다. 없으면 등록됨 - enumCheck(int grade) - Map 에 저장
 
 2. 학년 별 학생 목록 보기 기능
 특정학년 스캐너 입력 - 숫자
@@ -55,7 +55,7 @@ Map의 keyset() 으로 iterator 돌려서 같으면 value 출력
 - delete() -> int find(int num); 1이면 성공/-1이면 실패 
 
 9. 학생 찾기 메소드
-find(int num) -> Map value에서 똑같은거 찾기 
+find(int num) -> Map value 에서 똑같은거 찾기 
 
 10. 아무도 없는지 찾는 메소드
 nullCheck() -> if(map.isEmpty()){} - sout 출력

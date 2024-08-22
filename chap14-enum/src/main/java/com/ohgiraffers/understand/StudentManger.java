@@ -44,7 +44,7 @@ public class StudentManger {
                     studentList = hashmap.get(thisStudents);
 
                     for(StudentDTO studentDTO : studentList){
-                        System.out.println("이름 : " + studentDTO.getName() + "| 학번 : " + studentDTO.getNum()+ " | 점수 :" + studentDTO.getScore());
+                        System.out.println("이름 : " + studentDTO.getName() + "| 학번 : " + studentDTO.getNum()+ " | 점수 : " + studentDTO.getScore());
 
                     }
                 }
@@ -61,14 +61,25 @@ public class StudentManger {
         if(hashmap.isEmpty()){
             System.out.println("등록된 학생이 없습니다.");
         }else {
-            if(findStudent(num) == 1){
+            if(findStudent(num) == num){
                // 학생이 있으면
-                for(StudentDTO student : studentList){
-                    if(student.getNum() == num) {
-                        student.setScore(score);
+                for(List<StudentDTO> list : hashmap.values()){
+
+                    for(StudentDTO studentDTO : list){
+                        if(studentDTO.getNum() == num){
+                            studentDTO.setScore(score);
+                            System.out.println("성적이 수정됐습니다.");
+                            System.out.println("이름 : " + studentDTO.getName() + "| 학번 : " + studentDTO.getNum()+ " | 점수 : " + studentDTO.getScore());
+                        }
                     }
+                    /*if(student.getNum() == num) {
+                        student.setScore(score);
+                        System.out.println("성적이 수정됐습니다.");
+                        System.out.println("이름 : " + student.getName() + "| 학번 : " + student.getNum()+ " | 점수 : " + student.getScore());
+                    }*/
 
                 }
+
             }else {
                 System.out.println("존재하지 않는 학번입니다.");
             }
@@ -84,15 +95,25 @@ public class StudentManger {
         }else {
             if(findStudent(num) == 1){
                 // 학생이 있으면
-                /*for(StudentDTO student : studentList){
-                    if(student.getNum() == num) {
-                        for(Students key : hashmap.keySet()){
-                            hashmap.get(key).remove(num);
-                        }
+                for(List<StudentDTO> list : hashmap.values()){
 
+                    for(StudentDTO studentDTO : list){
+                        if(studentDTO.getNum() == num){
+                            list.remove(num);
+
+                            System.out.println("학생이 삭제되었습니다 !");
+                        }
                     }
 
-                }*/
+                    /*if(student.getNum() == num) {
+                        *//*for(Students key : hashmap.keySet()){
+                            hashmap.get(key).remove(num);
+                        }*//*
+                        studentList.remove(student);
+                        System.out.println(student.getName() + "님이 삭제되었습니다!");
+                    }*/
+
+                }
 
 
             }else {
@@ -126,14 +147,20 @@ public class StudentManger {
     // 학번으로 학생 찾기 - 중복 확인
     public int findStudent(int num){
 
-        for(StudentDTO student : studentList){
-            //if문 같은지 확인
-            if(student.getNum() == num){
+        for(List<StudentDTO> list : hashmap.values()){
 
-                return 1;
+            for(StudentDTO student : list){
+                //if문 같은지 확인
+                if(student.getNum() == num){
+
+                    return num;
+                }
             }
+
         }
 
         return -1;
     }
+
+
 }
